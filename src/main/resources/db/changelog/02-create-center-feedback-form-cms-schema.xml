@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create_feedback_form" author="sheng.w">
+        <createTable tableName="center_feedback_form">
+
+            <column name="center_feedback_form_id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column name="center_name" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="contact_number" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="date" type="date">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="form_filled_by" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="location" type="varchar(255)">
+                <constraints nullable="false" />\
+
+
+            </column>
+            <column name="name_of_the_owner" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="product_and_documentation" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="professionalism_and_aptitude" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="punctuality_in_visit" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="quality_of_query_resoluion" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="rate_the_completion_of_job" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="territor_assistance" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+
+            <column name="your_comments" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="tag-cms-1.2" author="indira">
+        <tagDatabase tag="cms-1.2" />
+    </changeSet>
+</databaseChangeLog>

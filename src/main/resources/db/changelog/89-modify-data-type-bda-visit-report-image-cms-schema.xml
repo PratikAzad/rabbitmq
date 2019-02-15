@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="modifydatatype_bda_visit_image" author="sheng.w">
+
+        <modifyDataType
+                columnName="bda_visit_image_view"
+                newDataType="MEDIUMTEXT"
+                tableName="bda_visit_image"/>
+        <dropNotNullConstraint
+                columnDataType="MEDIUMTEXT"
+                columnName="bda_visit_image_view"
+                tableName="bda_visit_image"/>
+
+    </changeSet>
+
+
+    <changeSet id="tag-cms-1.89" author="indira">
+        <tagDatabase tag="cms-1.89" />
+    </changeSet>
+</databaseChangeLog>

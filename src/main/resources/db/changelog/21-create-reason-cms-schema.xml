@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create-reason" author="sheng.w">
+        <createTable tableName="reason">
+
+            <column name="reason_id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column name="issue_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="raise_date" type="date">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="issue_of_status" type="varchar(255)">
+                <constraints  nullable="false" />
+            </column>
+
+            <column name="id" type="varchar(255)">
+                <constraints  nullable="false" />
+            </column>
+
+            <column name="resolved_by" type="varchar(255)">
+                <constraints  nullable="false" />
+
+            </column>
+            <column name="resolved_date" type="date">
+                <constraints  nullable="false" />
+
+            </column>
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="tag-cms-1.21" author="indira">
+        <tagDatabase tag="cms-1.21" />
+    </changeSet>
+</databaseChangeLog>

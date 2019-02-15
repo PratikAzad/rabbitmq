@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create_running_batch_status" author="sheng.w">
+        <createTable tableName="running_batch_status">
+
+            <column name="running_batch_status_id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column name="batch_no" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="completed_module" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="current_module" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="days" type="int(11)">
+                <constraints nullable="false" />
+            </column>
+
+
+            <column name="faculty" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="no_of_studs_at_beg" type="int(11)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name=" no_of_studs_attending" type="int(11)">
+                <constraints nullable="false" />
+
+            </column>
+
+            <column name="start_date" type="date">
+                <constraints nullable="false" />
+
+            </column>
+
+            <column name="time" type="datetime">
+            <constraints nullable="false" />
+        </column>
+
+            <column name="center_visit_report_id" type="varchar(255)">
+            <constraints nullable="false" />
+        </column>
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="tag-cms-1.4" author="indira">
+        <tagDatabase tag="cms-1.4" />
+    </changeSet>
+</databaseChangeLog>

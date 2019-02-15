@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="sheng.w" id="modify-column-name-add-primary-key-in-schedule-front-end-schedule">
+        <addPrimaryKey columnNames="front_end_Schedule_event_id,schedule_event_id"
+                       tableName="schedule_front_end_schedule"/>
+    </changeSet>
+
+    <changeSet id="tag-cms-1.108" author="indira">
+        <tagDatabase tag="cms-1.108" />
+    </changeSet>
+</databaseChangeLog>

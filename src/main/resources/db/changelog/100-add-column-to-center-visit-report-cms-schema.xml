@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="add-column-center_visit_report_drop_out_details" author="sheng.w">
+
+        <addColumn tableName="center_visit_report_drop_out_details">
+            <column name="drop_out_details_order" type="varchar(255)">
+                <constraints />
+            </column>
+        </addColumn>
+
+    </changeSet>
+
+    <changeSet id="add-column-center_visit_report_running_batch_status" author="sheng.w">
+
+        <addColumn tableName="center_visit_report_running_batch_status">
+            <column name="running_batch_status_order" type="varchar(255)">
+                <constraints />
+            </column>
+        </addColumn>
+
+    </changeSet>
+
+    <changeSet id="add-column-center_visit_report_stock_status" author="sheng.w">
+
+        <addColumn tableName="center_visit_report_stock_status">
+            <column name="stock_status_order" type="varchar(255)">
+                <constraints />
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="add-column-center_visit_report_completed_batch_status" author="sheng.w">
+
+        <addColumn tableName="center_visit_report_completed_batch_status">
+            <column name="completed_batch_status_order" type="varchar(255)">
+                <constraints />
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="add-column-center_visit_report_student_feedback_report" author="sheng.w">
+
+        <addColumn tableName="center_visit_report_student_feedback_report">
+            <column name="student_feedback_report_order" type="varchar(255)">
+                <constraints />
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="add-column-todo_for_center_todo_list_center" author="sheng.w">
+        <addColumn tableName="todo_for_center_todo_list_center">
+            <column name="todo_for_center_order" type="varchar(255)">
+                <constraints />
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="add-column-todo_for_apll_todo_list_apll" author="sheng.w">
+        <addColumn tableName="todo_for_apll_todo_list_apll">
+            <column name="todo_for_apll_order" type="varchar(255)">
+                <constraints />
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="tag-cms-1.100" author="indira">
+        <tagDatabase tag="cms-1.100" />
+    </changeSet>
+</databaseChangeLog>

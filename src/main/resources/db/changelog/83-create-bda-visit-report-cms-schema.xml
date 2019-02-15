@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create-bda_visit_report" author="sheng.w">
+        <createTable tableName="bda_visit_report">
+
+            <column name="bda_visit_report_id" type="varchar(255)">
+                <constraints primaryKey="true"  nullable="false" />
+            </column>
+
+            <column name="bda_visit_request_id" type="varchar(255)">
+            <constraints  nullable="false" />
+        </column>
+            <column name="description" type="varchar(255)">
+                <constraints  nullable="false" />
+            </column>
+            <column name="bda_visit_report_date" type="date">
+                <constraints  nullable="false" />
+            </column>
+
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="tag-cms-1.83" author="indira">
+        <tagDatabase tag="cms-1.83" />
+    </changeSet>
+</databaseChangeLog>

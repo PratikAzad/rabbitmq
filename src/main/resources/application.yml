@@ -1,0 +1,58 @@
+spring:
+  profiles:
+#    active: dev
+    active: demo
+#    active: prod
+#     active: kubernetes_test
+
+
+#  cloud:
+#      stream:
+#        bindings:
+#          cvreport-out:
+#            destination: report
+#            contentType: application/json
+#            binder: local_rabbit
+#          cvreport-in:
+#            destination: report
+#            contentType: application/json
+#            binder: local_rabbit
+#        binders:
+#          local_rabbit:
+#            type: rabbit
+#            environment:
+#              spring:
+#                rabbitmq:
+#                  host: rabbitmq-1
+#                  port: 5672
+#                  username: user
+#                  password: rabbitmq123
+#                  virtual-host: /
+#management:
+# health:
+#   binders:
+#      enabled: true
+
+#    active: demo
+#    active: kubernetes_test
+
+
+
+#spring.profiles.active=kubernete
+#spring.profiles.active=demo
+#spring.profiles.active=depl
+#  cloud:
+#    stream:
+#      kafka:
+#        binder:
+#          brokers: localhost:9092
+#      bindings:
+#        employees-in:
+#          destination: employees
+#          contentType: application/json
+#        cvreport-out:
+#          destination: report
+#          contentType: application/json
+#        cvreport-in:
+#          destination: report
+#          contentType: application/json

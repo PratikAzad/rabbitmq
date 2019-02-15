@@ -1,0 +1,90 @@
+
+swagger:
+  host: localhost:8025/
+  relativePath:
+
+rms:
+  uri: http://174.138.121.216/human
+
+server:
+  port: 8025
+
+
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://101.53.152.55/apll_test
+#    url: jdbc:mysql://101.53.153.204:3306/apll_test
+#    url: jdbc:mysql://localhost:3306/test
+    url: jdbc:mysql://localhost:3306/apll_test
+    username: root
+#    password: 7777
+    password: 11112222
+
+  jpa:
+    hibernate.ddl-auto: none
+    show-sql: true
+
+  cloud:
+      stream:
+        bindings:
+          cvreport-out:
+            destination: report
+            contentType: application/json
+            binder: local_rabbit
+            group: cms
+          cvreport-in:
+            destination: report
+            contentType: application/json
+            binder: local_rabbit
+            group: cms
+          mail-out:
+            destination: mail
+            contentType: application/json
+            binder: local_rabbit
+            group: cms
+          webscoket-out:
+            destination: webscoket
+            contentType: application/json
+            binder: local_rabbit
+            group: cms
+        binders:
+          local_rabbit:
+            type: rabbit
+            environment:
+              spring:
+                rabbitmq:
+                  host: localhost
+                  port: 5672
+                  username: guest
+                  password: guest
+                  virtual-host: /
+  liquibase:
+    change-log: classpath:db/liquibase-changelog.xml
+management:
+ health:
+   binders:
+      enabled: true
+
+
+#  zipkin:
+#    service:
+#      name: center-managements-service
+#    sender:
+#      type: web
+#    base-url: http://localhost:9411
+#  sleuth:
+#    sampler:
+#      percentage: 1.0
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        cloud:
+#          sleuth: DEBUG
+
+
+
+     #password: naga
+   #url: jdbc:mysql://101.52.153.55/apll_test
+#    url: jdbc:mysql://101.53.153.204:3306/apll_test

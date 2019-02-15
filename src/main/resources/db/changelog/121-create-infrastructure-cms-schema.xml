@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create_cvr_infrastructure" author="sheng.w">
+        <createTable tableName="cvr_infrastructure">
+
+            <column name="cvr_infrastructure_id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column name="infrastructure_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="minimal_requirement_satisfies" type="boolean">
+                <constraints  nullable="false" />
+            </column>
+            <column name="current_value" type="int">
+            </column>
+
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="tag-cms-1.121" author="indira">
+        <tagDatabase tag="cms-1.121" />
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+
+    <changeSet author="sheng.w" id="create-todo_list">
+
+        <renameColumn
+                columnDataType="varchar(255)"
+                newColumnName="resolver_id"
+                oldColumnName="id"
+                tableName="todo_list"/>
+    </changeSet>
+
+
+    <changeSet id="tag-cms-1.36" author="indira">
+        <tagDatabase tag="cms-1.36" />
+    </changeSet>
+</databaseChangeLog>

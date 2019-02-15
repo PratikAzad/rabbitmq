@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="add_column_cvr_infrastructure" author="sheng.w">
+
+
+        <modifyDataType columnName="current_value"
+                            newDataType="float"
+                            tableName="cvr_infrastructure"/>
+
+            <addColumn tableName="cvr_infrastructure">
+                <column name="minimal_value" type="float">
+                    <constraints nullable="false"/>
+                </column>
+            </addColumn>
+
+    </changeSet>
+
+    <changeSet id="tag-cms-1.124" author="indira">
+        <tagDatabase tag="cms-1.124" />
+    </changeSet>
+</databaseChangeLog>

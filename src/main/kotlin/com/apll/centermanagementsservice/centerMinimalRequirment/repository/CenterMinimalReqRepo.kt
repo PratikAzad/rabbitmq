@@ -1,0 +1,7 @@
+package com.apll.centermanagementsservice.centerMinimalRequirment.repository
+
+import com.apll.centermanagementsservice.centerMinimalRequirment.model.CenterMinimalReq
+import com.apll.centermanagementsservice.centerMinimalRequirment.model.CenterMinimalReqId
+import org.springframework.data.jpa.repository.JpaRepository
+
+interface CenterMinimalReqRepo:JpaRepository<CenterMinimalReq,CenterMinimalReqId>

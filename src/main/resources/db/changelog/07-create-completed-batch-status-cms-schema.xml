@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create_completed_batch_status" author="sheng.w">
+        <createTable tableName="completed_batch_status">
+
+            <column name="completed_batch_status_id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+
+            <column name="batch_no" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+
+
+
+            <column name="conducted_on" type="date">
+                <constraints nullable="false" />
+            </column>
+
+
+
+
+            <column name="exam_conducted" type="bit(1)">
+                <constraints nullable="false" />
+            </column>
+
+
+            <column name="no_of_students_appeared" type="int(11)">
+                <constraints nullable="false" />
+            </column>
+
+
+
+            <column name="remarks" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="total_no_of_students" type="int(11)">
+                <constraints nullable="false" />
+            </column>
+
+
+            <column name="center_visit_report_id" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="tag-cms-1.7" author="indira">
+        <tagDatabase tag="cms-1.7" />
+    </changeSet>
+</databaseChangeLog>

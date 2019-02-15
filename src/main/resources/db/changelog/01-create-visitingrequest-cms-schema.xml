@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create_visitingrequest" author="sheng.w">
+        <createTable tableName="visiting_request">
+            <column name="request_id" type="varchar(50)">
+                <constraints primaryKey="true"  nullable="false" />
+            </column>
+
+            <column name="request_by" type="varchar(50)">
+                <constraints  nullable="false" />
+            </column>
+
+            <column name="reason" type="varchar(200)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="center_id" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="center_name" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name=" requester_id" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="requester_name" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="request_date" type="date">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="visited" type="boolean">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="tag-cms-1.1" author="indira">
+        <tagDatabase tag="cms-1.1" />
+    </changeSet>
+</databaseChangeLog>

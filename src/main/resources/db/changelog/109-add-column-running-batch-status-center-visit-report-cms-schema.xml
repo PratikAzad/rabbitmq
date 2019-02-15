@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="add-column_running_batch_status" author="sheng.w">
+
+
+        <addColumn tableName="running_batch_status">
+            <column name="faculty_mob_no" type="varchar(255)">
+                <constraints  nullable="false" />
+            </column>
+        </addColumn>
+
+        <renameColumn
+                columnDataType="varchar(255)"
+                newColumnName="faculty_name"
+                oldColumnName="faculty"
+                tableName="running_batch_status"/>
+
+
+        <dropColumn
+                    columnName="no_of_studs_attending"
+
+                    tableName="running_batch_status"/>
+
+    </changeSet>
+
+    <changeSet author="sheng.w" id="dropTable-student_feedback_report">
+        <dropTable tableName="student_feedback_report"/>
+
+    </changeSet>
+
+
+    <changeSet author="sheng.w" id="dropTable-center_visit_report_student_feedback_report">
+        <dropTable tableName="center_visit_report_student_feedback_report"/>
+
+    </changeSet>
+
+
+    <changeSet id="tag-cms-1.109" author="indira">
+        <tagDatabase tag="cms-1.109" />
+    </changeSet>
+</databaseChangeLog>

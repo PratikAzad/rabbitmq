@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+
+    <changeSet id="drop_not_null_constraint_completed_batch_status" author="sheng.w">
+
+        <dropNotNullConstraint
+                columnDataType="int(11)"
+                columnName="no_of_students_appeared"
+                tableName="completed_batch_status"/>
+    </changeSet>
+
+    <changeSet id="add_column-bda_visit_request" author="sheng.w">
+
+        <addColumn tableName="bda_visit_request">
+            <column name="bda_request_type" type="varchar(255)"/>
+        </addColumn>
+
+    </changeSet>
+
+
+
+
+    <changeSet id="tag-cms-1.96" author="indira">
+        <tagDatabase tag="cms-1.96" />
+    </changeSet>
+</databaseChangeLog>

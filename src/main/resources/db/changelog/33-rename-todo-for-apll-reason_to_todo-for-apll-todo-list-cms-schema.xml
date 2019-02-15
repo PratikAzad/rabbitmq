@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+
+    <changeSet author="sheng.w" id="create-todo_for_apll_reason">
+        <renameTable
+                newTableName="todo_for_apll_todo_list"
+                oldTableName="todo_for_apll_reason"/>
+        <renameColumn
+                columnDataType="varchar(255)"
+                newColumnName="todo_list_id"
+                oldColumnName="reason_id"
+                tableName="todo_for_apll_todo_list"/>
+    </changeSet>
+
+
+    <changeSet id="tag-cms-1.33" author="indira">
+        <tagDatabase tag="cms-1.33" />
+    </changeSet>
+</databaseChangeLog>

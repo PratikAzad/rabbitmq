@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create_drop_out_details" author="sheng.w">
+        <createTable tableName="drop_out_details">
+
+            <column name="drop_out_details_id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+
+            <column name="batch_no" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="drop_out_date" type="date">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="id" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+
+            <column name="name_of_students" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+
+
+
+            <column name="remarks" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="center_visit_report_id" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="tag-cms-1.6" author="indira">
+        <tagDatabase tag="cms-1.6" />
+    </changeSet>
+</databaseChangeLog>

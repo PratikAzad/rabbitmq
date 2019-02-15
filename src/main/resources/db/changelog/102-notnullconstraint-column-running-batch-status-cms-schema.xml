@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create_completed_batch_status" author="sheng.w">
+
+
+        <dropNotNullConstraint
+                columnDataType="varchar(255)"
+                columnName="completed_module"
+                tableName="running_batch_status"/>
+    </changeSet>
+
+    <changeSet author="sheng.w" id="modifyDataType-student_feedback_report">
+        <modifyDataType
+                        columnName="feedback_details"
+                        newDataType="varchar(255)"
+                        tableName="student_feedback_report"/>
+    </changeSet>
+    <changeSet author="sheng.w" id="modifyDataType-stock_status">
+        <modifyDataType
+                columnName="feedback"
+                newDataType="varchar(255)"
+                tableName="stock_status"/>
+    </changeSet>
+
+
+    <changeSet author="sheng.w" id="modifyDataType-drop_out_details">
+        <modifyDataType
+                columnName="remarks"
+                newDataType="text"
+                tableName="drop_out_details"/>
+    </changeSet>
+    <changeSet author="sheng.w" id="modifyDataType-completed_batch_status">
+        <modifyDataType
+                columnName="remarks"
+                newDataType="text"
+                tableName="completed_batch_status"/>
+    </changeSet>
+
+
+
+    <changeSet author="sheng.w" id="addNotNullConstraint-center_visit_report_status">
+    <addNotNullConstraint
+            columnDataType="varchar(255)"
+            columnName="center_visit_report_status"
+            tableName="center_visit_report"/>
+</changeSet>
+    <changeSet author="sheng.w" id="addNotNullConstraint-request_id">
+        <addNotNullConstraint
+                columnDataType="varchar(255)"
+                columnName="request_id"
+                tableName="center_visit_report"/>
+    </changeSet>
+    <changeSet author="sheng.w" id="addNotNullConstraint-center_visit_report_date">
+        <addNotNullConstraint
+                columnDataType="date"
+                columnName="center_visit_report_date"
+                tableName="center_visit_report"/>
+    </changeSet>
+    <changeSet author="sheng.w" id="addNotNullConstraint-schedule_Date">
+        <addNotNullConstraint
+                columnDataType="date"
+                columnName="schedule_Date"
+                tableName="center_visit_report"/>
+    </changeSet>
+    <changeSet author="sheng.w" id="addNotNullConstraint-front_end_id">
+        <addNotNullConstraint
+                columnDataType="varchar(255)"
+                columnName="front_end_id"
+                tableName="center_visit_report"/>
+    </changeSet>
+
+
+
+    <changeSet id="tag-cms-1.102" author="indira">
+        <tagDatabase tag="cms-1.102" />
+    </changeSet>
+</databaseChangeLog>

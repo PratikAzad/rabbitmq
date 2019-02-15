@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create_rejected_front_end_schedule" author="sheng.w">
+        <createTable tableName="rejected_front_end_schedule">
+
+            <column name="rejected_front_end_schedule_id" type="varchar(255)">
+                <constraints primaryKey="true"  nullable="false" />
+            </column>
+
+            <column name="front_end_schedule_id" type="varchar(255)">
+            <constraints  nullable="false" />
+        </column>
+
+            <column name="message" type="varchar(255)">
+                <constraints  nullable="false" />
+            </column>
+
+            <column name="head_admin_id" type="varchar(255)">
+                <constraints  nullable="false" />
+            </column>
+            <column name="version" type="int(11)">
+                <constraints   />
+            </column>
+
+            <column name="reject_date" type="date">
+                <constraints  nullable="false" />
+            </column>
+
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="tag-cms-1.86" author="indira">
+        <tagDatabase tag="cms-1.86" />
+    </changeSet>
+</databaseChangeLog>

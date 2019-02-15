@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create_stockStatus" author="sheng.w">
+        <createTable tableName="stock_status">
+
+            <column name="stock_status_id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column name="feedback" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+
+            <column name="indent_sent_on_by_mail" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="indent_taken_during_visit" type="bit(1)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="item" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="quantity_in_hand" type="int(11)">
+                <constraints nullable="false" />
+            </column>
+
+
+            <column name="quantity_indented" type="int(11)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="quantity_required" type="int(11)">
+                <constraints nullable="false" />
+            </column>
+
+
+            <column name="center_visit_report_id" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="tag-cms-1.8" author="indira">
+        <tagDatabase tag="cms-1.8" />
+    </changeSet>
+</databaseChangeLog>

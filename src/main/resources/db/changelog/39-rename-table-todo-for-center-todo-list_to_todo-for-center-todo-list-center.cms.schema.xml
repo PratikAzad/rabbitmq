@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+
+    <changeSet author="sheng.w" id="create-todo_for_center_todo_list">
+        <renameTable
+                newTableName="todo_for_center_todo_list_center"
+                oldTableName="todo_for_center_todo_list"/>
+        <renameColumn
+                columnDataType="varchar(255)"
+                newColumnName="todo_list_center_id"
+                oldColumnName="todo_list_id"
+                tableName="todo_for_center_todo_list_center"/>
+    </changeSet>
+
+
+    <changeSet id="tag-cms-1.39" author="indira">
+        <tagDatabase tag="cms-1.39" />
+    </changeSet>
+</databaseChangeLog>

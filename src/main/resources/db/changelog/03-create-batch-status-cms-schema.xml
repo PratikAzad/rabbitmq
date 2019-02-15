@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create_batchStatus" author="sheng.w">
+        <createTable tableName="batch_status">
+
+            <column name="batch_status_id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column name="batch_no" type="int(11)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="exam_conducted" type="Boolean">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="exam_conduct_date" type="date">
+                <constraints nullable="false" />
+            </column>
+
+
+            <column name="no_of_student_appeared" type="int(11)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="total_no_of_student" type="int(11)">
+                <constraints nullable="false" />
+            </column>
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="tag-cms-1.3" author="indira">
+        <tagDatabase tag="cms-1.3" />
+    </changeSet>
+</databaseChangeLog>

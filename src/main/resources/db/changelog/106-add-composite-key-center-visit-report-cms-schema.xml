@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="sheng.w" id="addPrimaryKey-center_visit_report_running_batch_status">
+        <addPrimaryKey  columnNames="center_visit_report_id,running_batch_status_id"
+                        tableName="center_visit_report_running_batch_status"/>
+    </changeSet>
+
+    <changeSet author="sheng.w" id="addPrimaryKey-center_visit_report_drop_out_details">
+        <addPrimaryKey  columnNames="center_visit_report_id,drop_out_details_id"
+                        tableName="center_visit_report_drop_out_details"/>
+    </changeSet>
+
+    <changeSet author="sheng.w" id="addPrimaryKey-center_visit_report_completed_batch_status">
+        <addPrimaryKey  columnNames="center_visit_report_id,completed_batch_status_id"
+                        tableName="center_visit_report_completed_batch_status"/>
+    </changeSet>
+
+    <changeSet author="sheng.w" id="addPrimaryKey-center_visit_report_student_feedback_report">
+        <addPrimaryKey  columnNames="center_visit_report_id,student_feedback_Report_id"
+                        tableName="center_visit_report_student_feedback_report"/>
+    </changeSet>
+
+    <changeSet author="sheng.w" id="addPrimaryKey-center_visit_report_stock_status">
+        <addPrimaryKey  columnNames="center_visit_report_id,stock_status_id"
+                        tableName="center_visit_report_stock_status"/>
+    </changeSet>
+
+
+    <changeSet author="sheng.w" id="addPrimaryKey-todo_for_apll_todo_list_apll">
+        <addPrimaryKey  columnNames="todo_for_apll_id,todo_list_apll_id"
+                        tableName="todo_for_apll_todo_list_apll"/>
+    </changeSet>
+
+    <changeSet author="sheng.w" id="addPrimaryKey-todo_for_center_todo_list_center">
+        <addPrimaryKey  columnNames="todo_for_center_id,todo_list_center_id"
+                        tableName="todo_for_center_todo_list_center"/>
+    </changeSet>
+
+
+    <changeSet author="sheng.w" id="addPrimaryKey-center_visit_report_todo_for_center">
+        <addPrimaryKey  columnNames="center_visit_report_id,todo_for_center_id"
+                        tableName="center_visit_report_todo_for_center"/>
+    </changeSet>
+
+
+    <changeSet author="sheng.w" id="addPrimaryKey-center_visit_report_todo_for_apll">
+        <addPrimaryKey  columnNames="center_visit_report_id,todo_for_apll_id"
+                        tableName="center_visit_report_todo_for_apll"/>
+    </changeSet>
+
+
+    <changeSet id="tag-cms-1.106" author="indira">
+        <tagDatabase tag="cms-1.106" />
+    </changeSet>
+</databaseChangeLog>
+
+
+
+

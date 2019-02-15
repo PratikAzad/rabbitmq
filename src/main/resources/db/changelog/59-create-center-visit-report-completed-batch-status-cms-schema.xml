@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+
+<changeSet id="create-center_visit_report_completed_batch_status"  author="sheng.w">
+
+
+    <createTable tableName="center_visit_report_completed_batch_status">
+        <column name="center_visit_report_id" type="varchar(50)">
+            <constraints  nullable="false" />
+        </column>
+
+
+        <column name="completed_batch_status_id" type="varchar(50)">
+            <constraints nullable="false"/>
+        </column>
+
+    </createTable>
+</changeSet>
+
+<changeSet id="tag-cms-1.59" author="indira">
+    <tagDatabase tag="cms-1.59" />
+</changeSet>
+</databaseChangeLog>

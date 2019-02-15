@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create-front-end-schedule-schedule" author="sheng.w">
+        <createTable tableName="front_end_schedule_schedule">
+
+            <column name="front_end_schedule_id" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="schedule_id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="tag-cms-1.20" author="indira">
+        <tagDatabase tag="cms-1.20" />
+    </changeSet>
+</databaseChangeLog>

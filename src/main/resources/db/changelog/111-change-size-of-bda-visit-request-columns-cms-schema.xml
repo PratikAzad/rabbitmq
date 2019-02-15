@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="sheng.w" id="change-datatype-size-in-bda_visit_request">
+        <modifyDataType
+                columnName="description"
+                newDataType="text"
+                tableName="bda_visit_request"/>
+    </changeSet>
+
+    <changeSet author="sheng.w" id="change-datatype-size-in-bda_visit_report">
+        <modifyDataType
+                columnName="description"
+                newDataType="text"
+                tableName="bda_visit_report"/>
+    </changeSet>
+
+
+    <changeSet author="sheng.w" id="change-datatype-size-in-todo_list_apll">
+        <modifyDataType
+                columnName="how_to_resolved"
+                newDataType="text"
+                tableName="todo_list_apll"/>
+    </changeSet>
+
+
+
+
+    <changeSet author="sheng.w" id="change-datatype-size-in-todo_list_center">
+        <modifyDataType
+                columnName="how_to_resolved"
+                newDataType="text"
+                tableName="todo_list_center"/>
+    </changeSet>
+
+
+
+    <changeSet id="tag-cms-1.111" author="indira">
+        <tagDatabase tag="cms-1.111" />
+    </changeSet>
+</databaseChangeLog>

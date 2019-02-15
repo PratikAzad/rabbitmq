@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create_centerstate" author="sheng.w">
+        <createTable tableName="center_state">
+            <column name="center_id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="center_name" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="name_of_owner" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="contact_number" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="alternate_number" type="varchar(255)">
+            <constraints nullable="false" />
+        </column>
+            <column name="house_no" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="street_name" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="area_name" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="landmark" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="city" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="pin_code" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="state" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="courier_service" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name=" email_id" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="pan_details" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="center_establish_year" type="date">
+                <constraints nullable="false" />
+            </column>
+            <column name="service_tax_number" type="Long">
+                <constraints nullable="false" />
+            </column>
+            <column name=" center_type" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name=" center_status" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name=" infrastructure_id" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="subregion_id" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="tag-cms-1.12" author="indira">
+        <tagDatabase tag="cms-1.12" />
+    </changeSet>
+</databaseChangeLog>

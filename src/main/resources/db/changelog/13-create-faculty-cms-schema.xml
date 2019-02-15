@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create_faculty" author="sheng.w">
+        <createTable tableName="faculty_state">
+            <column name="faculty_id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="faculty_name " type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="qualification" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="door_no" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="street_name" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="area_name" type="varchar(255)">
+                <constraints nullable="false" />\
+            </column>
+            <column name="land_mark" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="city" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="state" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="zip_code" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="contact_number" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name=" technical_specialization" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="experience" type="int">
+                <constraints nullable="false" />
+            </column>
+            <column name="email_id" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="center_id" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="tag-cms-1.13" author="indira">
+        <tagDatabase tag="cms-1.13" />
+    </changeSet>
+</databaseChangeLog>

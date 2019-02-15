@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create_center_visit_report" author="sheng.w">
+        <dropColumn  tableName="center_visit_report"
+                    columnName="center_feedback_form_id"
+                    />
+
+        <addColumn tableName="center_visit_report">
+            <column name="todo_for_center_id" type="varchar(255)"/>
+        </addColumn>
+
+        <addColumn tableName="center_visit_report">
+            <column name="todo_for_apll_id" type="varchar(255)"/>
+        </addColumn>
+
+        <addColumn tableName="center_visit_report">
+            <column name="schedule_id" type="varchar(255)"/>
+        </addColumn>
+        <addColumn tableName="center_visit_report">
+            <column name="center_visit_report_date" type="date"/>
+        </addColumn>
+
+
+
+    </changeSet>
+
+    <changeSet id="tag-cms-1.26" author="indira">
+        <tagDatabase tag="cms-1.26" />
+    </changeSet>
+</databaseChangeLog>

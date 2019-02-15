@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="add-column-in-bda-visit-report-bda-visit-image" author="sheng.w">
+        <addColumn tableName="bda_visit_report_bda_visit_image">
+            <column name="bda_visit_image_order" type="int(11)"/>
+        </addColumn>
+
+    </changeSet>
+
+    <changeSet id="tag-cms-1.99" author="indira">
+        <tagDatabase tag="cms-1.99" />
+    </changeSet>
+</databaseChangeLog>

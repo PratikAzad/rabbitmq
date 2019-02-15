@@ -1,0 +1,8 @@
+/*
+package com.apll.centermanagementsservice.schedulemanagement.repository
+
+import com.apll.centermanagementsservice.schedulemanagement.model.FrontEndScheduleEvent
+import com.apll.centermanagementsservice.schedulemanagement.model.FrontEndScheduleEventId
+import org.springframework.data.jpa.repository.JpaRepository
+
+interface FrontEndScheduleEventRepo:JpaRepository<FrontEndScheduleEvent,FrontEndScheduleEventId>*/

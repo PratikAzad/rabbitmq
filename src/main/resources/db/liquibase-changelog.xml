@@ -1,0 +1,162 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <include file="changelog/127-change-datatype-primarykey-DATABASECHANGELOG.xml" relativeToChangelogFile="true"/>
+
+    <include file="changelog/01-create-visitingrequest-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/02-create-center-feedback-form-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/03-create-batch-status-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/04-create-running-batch-status-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/05-create-student-feedback-reports-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/06-create-drop-out-details-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/07-create-completed-batch-status-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/08-create-stock-status-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/09-create-region-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/10-create-sub-region-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/11-create-center-visit-report-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/12-create-center-state-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/13-create-faculty-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/14-create-infrastructure-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/15-add-column-center-visit-report-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/16-add-column-visitingrequest-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/17-create-bussiness-developement-activity-visit-request-sm.schema.xml" relativeToChangelogFile="true"/>
+
+   <include file="changelog/18-create-front-end-schedule-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/19-create-schedule-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/20-create-front-end-schedule-schedule-cms-schema.xml" relativeToChangelogFile="true"/>
+
+
+   <include file="changelog/21-create-reason-cms-schema.xml" relativeToChangelogFile="true"/>
+
+   <include file="changelog/22-create-todo-for-center-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/23-create-todo-for-center_reason-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/24-create-todo-for-apll-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/25-create-todo-for-apll_reason-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/26-add-column-center-visit-report-schema.xml" relativeToChangelogFile="true"/>
+
+   <include file="changelog/27-add-column-bussiness-developement-activity-visit-request-sm.schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/28-add-column-visitingrequest-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/29-drop-column-visitingrequest-cms-schema.xml" relativeToChangelogFile="true"/>
+
+   <include file="changelog/30-add-column-visitingrequest-cms-schema.xml" relativeToChangelogFile="true"/>
+
+   <include file="changelog/31-rename-reason-to-todolist-cms-schema.xml" relativeToChangelogFile="true"/>
+
+   <include file="changelog/32-rename-todo-for-center-reason_to_todo-for-center-todo-list-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/33-rename-todo-for-apll-reason_to_todo-for-apll-todo-list-cms-schema.xml" relativeToChangelogFile="true"/>
+
+   <include file="changelog/34-add-column-visitingrequest-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/35-dropnotnullcontraint-to-todo-list-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/36-rename-column-todo-list-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/37-create-todo-list-apll-cms-scheama.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/38-rename-table-todo-list_to_todo-list-center.cms.schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/39-rename-table-todo-for-center-todo-list_to_todo-for-center-todo-list-center.cms.schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/40-drop-table-todo-for-apll-todo-list_to_todo-for-apll-todo-list-apll.cms.schema.xml" relativeToChangelogFile="true"/>
+
+   <include file="changelog/41-create-table-todo-for-apll-todo-list-apll.cms.schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/42-add-column-todo-list-apll_to_todo-for-apll-id-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/43-add-column-todo-list-center_to_todo-for-center-id-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/44-drop-table-todo-for-apll-todo-list-apll.cms.schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/45-drop-table-todo-for-center-todo-list-center.cms.schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/46-add-column-approved-front-end-schedule-cms-schema.xml" relativeToChangelogFile="true"/>
+
+    <include file="changelog/47-create-region-sub-region-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/48-create-center-state-faculty-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/49-drop-column-center-id-cms-schema.xml" relativeToChangelogFile="true"/>
+
+    <include file="changelog/50-drop-column-center-visit-report-id-running-batch-status-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/51-drop-column-center-visit-report-id-drop-out-details-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/52-drop-column-center-visit-report-id-student-feedback-reports-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/53-drop-column-center-visit-report-id-completed-batch-status-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/54-drop-column-center-visit-report-id-stock-status-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/55-drop-column-todo-for-center-id-todo-list-center-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/56-drop-column-todo-for-apll-id-todo-list-apll-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/57-create-center-visit-report-running-batch-status-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/58-create-center-visit-report-drop-out-details-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/59-create-center-visit-report-completed-batch-status-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/60-create-center-visit-report-student-feedback-report-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/61-create-center-visit-report-stock-status-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/62-create-todo-for-apll-todo-list-center-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/63-create-todo-for-center-todo-list-center-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/64-create-center-visit-report-todo-for-apll-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/65-create-center-visit-report-todo-for-apll-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/66-drop-column-todo-for-center-id-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/67-drop-column-todo-for-apll-id-center-visit-report-cms-schema.xml" relativeToChangelogFile="true"/>
+
+   <include file="changelog/68-modify-column-type-front-end-name-in-front-ends-schedule-cms-schema.xml" relativeToChangelogFile="true"/>
+   <include file="changelog/69-modify-column-type-region-id-in-schedule-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/70-drop-notnull-constraint-completed-batch-status-cms-schema.xml" relativeToChangelogFile="true"/>
+
+    <include file="changelog/71-drop-column-front-end-schedule-id-in-front-end-schedule-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/72-drop-column-schedule-id-in-schedule-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/73-add-six-columns-in-front-end-schedule-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/74-add-two-columns-in-schedule-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/75-drop-table-front-end-schedule-schedule-for-front-end-schedule-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/76-create-table-schedule-front-end-schedule-for-front-end-schedule-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/78-add-column-employee-type-in-front-end-schedule-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/77-add-columns-to-bda-visit-request-cms-schema.xml" relativeToChangelogFile="true"/>
+
+    <include file="changelog/79-drop-not-null-constraint-frontendname-bda-visit-request-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/80-add-column-todo-list-apll-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/81-add-column-todo-list-center-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/82-rename-column-for-visiting-requestid-center-visit-report-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/83-create-bda-visit-report-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/84-bda-visit-image-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/85-bda-visit-report-bda-visit-image-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/86-create-rejected-front-end-schedule-cms-schema.xml" relativeToChangelogFile="true"/>
+
+    <include file="changelog/87-rename-column-name-in-front-end-schedule-cms-schedule.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/88-create-approval-for-update-front-end-schedule-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/89-modify-data-type-bda-visit-report-image-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/90-add-column-front-end-schedule-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/91-drop-tables-rejected-fes-approve-fes-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/92-create-table-bda-request-bda-report-cms-schema.xml" relativeToChangelogFile="true"/>
+
+    <include file="changelog/93-add-column-bda-visit-request-dbadate-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/94-modify-column-visiting-Request-Id-in-schedule-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/95-modify-column-type-service-tax-number-in-center-state-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/96-drop-not-null-constraiant-completed-batch-status-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/97-add-column-center-visit-report-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/98-add-column-reason-for-update-in-front-end-schedule-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/99-add-column-bda-visit-report-bda-visit-image-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/100-add-column-to-center-visit-report-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/101-add-column-center-visit-report-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/102-notnullconstraint-column-running-batch-status-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/103-change-size-of-datatype-bda-visit-request-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/104-add-primary-key-region-sub-region-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/105-add-composite-key-bda-visit-request-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/106-add-composite-key-center-visit-report-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/107-modify-column-name-add-primary-key-in-center-state-faculty-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/108-modify-column-name-add-primary-key-in--schedule-front-end-schedule-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/109-add-column-running-batch-status-center-visit-report-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/110-create-center-minimal-req-cms-schema.xml" relativeToChangelogFile="true"/>
+
+    <include file="changelog/111-change-size-of-bda-visit-request-columns-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/112-add-column-no-of-lab-in-infrastructure-cms-schema.xml" relativeToChangelogFile="true"/>
+
+
+    <include file="changelog/113-drop-column-square-feet-from-infrastructure-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/114-drop-column-square-feet-from-Center-Minimal-Req-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/118-modify-experience-data-type-in-faculty-state-cms-schema.xml" relativeToChangelogFile="true"/>
+
+    <include file="changelog/115-add-column-visitingrequest-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/116-create-custom-report-cms-schema.xml" relativeToChangelogFile="true"/>
+
+
+    <include file="changelog/117-change-size-of-visiting-request-columns-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/119-add-column-custom-report-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/121-create-infrastructure-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/122-create-center-visit-report-infrastructure-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/123-add-composite-key-column-center-visit-report-cvr-infrastructure-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/124-add-column-cvr-infrastructure-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/125-create-center-otp-cms-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/126-add-column-custom-report-cms-schema.xml" relativeToChangelogFile="true"/>
+
+
+</databaseChangeLog>
+
+
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="sheng.w" id="change-datatype-size-in-visiting-request">
+        <modifyDataType
+                columnName="reason"
+                newDataType="text"
+                tableName="visiting_request"/>
+
+        <modifyDataType
+                columnName="how_to_resolved"
+                newDataType="text"
+                tableName="visiting_request"/>
+
+        <modifyDataType
+                columnName="reason_for_not_resolved"
+                newDataType="text"
+                tableName="visiting_request"/>
+
+    </changeSet>
+
+
+
+    <changeSet id="tag-cms-1.117" author="indira">
+        <tagDatabase tag="cms-1.117" />
+    </changeSet>
+</databaseChangeLog>

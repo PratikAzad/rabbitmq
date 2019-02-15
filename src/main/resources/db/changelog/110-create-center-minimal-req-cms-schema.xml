@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create_center_minimal_req" author="sheng.w">
+        <createTable tableName="center_minimal_req">
+
+            <column name="center_minimal_req_id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column name="covered_area" type="FLOAT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="square_feet" type="FLOAT">
+                <constraints  nullable="false" />
+            </column>
+            <column name="class_rooms" type="int">
+                <constraints nullable="false" />
+            </column>
+            <column name="sitting_capacity_per_class" type="int">
+                <constraints nullable="false" />
+            </column>
+            <column name="no_of_machines" type="int">
+                <constraints nullable="false" />
+            </column>
+            <column name="sitting_capacity_per_labs" type="int">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="no_of_lab" type="int">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="tag-cms-1.110" author="indira">
+        <tagDatabase tag="cms-1.110" />
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="modify-region-id-from-schedule" author="sheng.w">
+
+        <dropColumn  tableName="schedule"
+                     columnName="region_id"/>
+
+        <addColumn tableName="schedule">
+            <column name="region_id" type="varchar(255)"/>
+        </addColumn>
+
+    </changeSet>
+
+    <changeSet id="tag-cms-1.69" author="indira">
+        <tagDatabase tag="cms-1.69" />
+    </changeSet>
+</databaseChangeLog>

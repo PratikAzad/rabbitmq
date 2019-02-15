@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="modify-column-type-service-tax-number-in-center-state" author="sheng.w">
+
+        <dropColumn  tableName="center_state"
+                     columnName="service_tax_number"/>
+
+        <addColumn tableName="center_state">
+            <column name="service_tax_number" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="tag-cms-1.95" author="indira">
+        <tagDatabase tag="cms-1.95" />
+    </changeSet>
+</databaseChangeLog>

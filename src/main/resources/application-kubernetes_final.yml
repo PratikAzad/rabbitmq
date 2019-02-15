@@ -1,0 +1,62 @@
+swagger:
+  host: 68.183.244.67/
+  relativePath: center
+rms:
+  uri: http://human:8083
+
+server:
+  port: 8080
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://schedule-mysql:3306/apll_test
+    username: root
+    password: naga
+  jpa:
+    hibernate.ddl-auto: none
+    show-sql: true
+
+  cloud:
+      stream:
+        bindings:
+          cvreport-out:
+            destination: report
+            contentType: application/json
+            binder: local_rabbit
+            group: cms
+          cvreport-in:
+            destination: report
+            contentType: application/json
+            binder: local_rabbit
+            group: cms
+          mail-out:
+            destination: mail
+            contentType: application/json
+            binder: local_rabbit
+            group: cms
+          webscoket-out:
+            destination: webscoket
+            contentType: application/json
+            binder: local_rabbit
+            group: cms
+        binders:
+          local_rabbit:
+            type: rabbit
+            environment:
+              spring:
+                rabbitmq:
+                  host: my-release-rabbitmq
+                  port: 5672
+                  username: user
+                  password: rabbitmq123
+                  virtual-host: /
+  liquibase:
+    change-log: classpath:db/liquibase-changelog.xml
+management:
+ health:
+   binders:
+      enabled: true
+
+

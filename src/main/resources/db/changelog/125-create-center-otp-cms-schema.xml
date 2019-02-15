@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create_center_otp" author="sheng.w">
+        <createTable tableName="center_otp">
+            <column name="center_otp_id" type="varchar(255)">
+                <constraints primaryKey="true"  nullable="false" />
+            </column>
+
+            <column name="center_id" type="varchar(255)">
+                <constraints  nullable="false" />
+            </column>
+
+            <column name="otp" type="varchar(200)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="created_time" type="datetime">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="validate_time" type="datetime">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="status" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="tag-cms-1.125" author="indira">
+        <tagDatabase tag="cms-1.125" />
+    </changeSet>
+</databaseChangeLog>
